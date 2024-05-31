@@ -1,6 +1,6 @@
 package com.sksamuel.elastic4s
 
-import com.sksamuel.elastic4s.api.{AggregationApi, AliasesApi, AnalyzeApi, AnalyzerApi, BulkApi, CatsApi, ClearRolesCacheApi, ClusterApi, CollapseApi, CountApi, CreateIndexApi, CreateRoleApi, CreateUserApi, DeleteApi, DeleteIndexApi, DeleteRoleApi, DeleteUserApi, ExistsApi, ExplainApi, ForceMergeApi, GetApi, HighlightApi, IndexAdminApi, IndexApi, IndexRecoveryApi, IndexTemplateApi, IngestApi, KnnApi, LocksApi, MappingApi, NodesApi, NormalizerApi, PipelineAggregationApi, PitApi, QueryApi, ReindexApi, RoleApi, ScoreApi, ScriptApi, ScrollApi, SearchApi, SearchTemplateApi, SettingsApi, SnapshotApi, SortApi, StoredScriptApi, SuggestionApi, TaskApi, TermVectorApi, TokenFilterApi, TokenizerApi, TypesApi, UpdateApi, UserAdminApi, UserApi, ValidateApi}
+import com.sksamuel.elastic4s.api.{AggregationApi, AliasesApi, AnalyzeApi, AnalyzerApi, BulkApi, CatsApi, ClearRolesCacheApi, ClusterApi, CollapseApi, CountApi, CreateIndexApi, CreateRoleApi, CreateUserApi, DeleteApi, DeleteIndexApi, DeleteRoleApi, DeleteUserApi, ExistsApi, ExplainApi, ForceMergeApi, GetApi, HighlightApi, IndexAdminApi, IndexApi, IndexRecoveryApi, IndexTemplateApi, IngestApi, KnnApi, LocksApi, MappingApi, NodesApi, NormalizerApi, PipelineAggregationApi, PitApi, QueryApi, ReindexApi, ReloadSearchAnalyzersApi, RoleApi, ScoreApi, ScriptApi, ScrollApi, SearchApi, SearchTemplateApi, SettingsApi, SnapshotApi, SortApi, StoredScriptApi, SuggestionApi, SynonymsApi, TaskApi, TermVectorApi, TermsEnumApi, TokenFilterApi, TokenizerApi, TypesApi, UpdateApi, UserAdminApi, UserApi, ValidateApi}
 
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
@@ -41,6 +41,7 @@ trait ElasticApi
     with QueryApi
     with PipelineAggregationApi
     with ReindexApi
+    with ReloadSearchAnalyzersApi
     with RoleApi
     with ScriptApi
     with ScoreApi
@@ -52,8 +53,10 @@ trait ElasticApi
     with SortApi
     with StoredScriptApi
     with SuggestionApi
+    with SynonymsApi
     with TaskApi
     with TermVectorApi
+    with TermsEnumApi
     with TokenizerApi
     with TokenFilterApi
     with TypesApi

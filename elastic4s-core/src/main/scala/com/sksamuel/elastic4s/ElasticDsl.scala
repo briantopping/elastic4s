@@ -15,12 +15,15 @@ import com.sksamuel.elastic4s.handlers.locks.LocksHandlers
 import com.sksamuel.elastic4s.handlers.nodes.NodesHandlers
 import com.sksamuel.elastic4s.handlers.pit.PitHandlers
 import com.sksamuel.elastic4s.handlers.reindex.ReindexHandlers
+import com.sksamuel.elastic4s.handlers.reloadsearchanalyzers.ReloadSearchAnalyzersHandlers
 import com.sksamuel.elastic4s.handlers.script.StoredScriptHandlers
 import com.sksamuel.elastic4s.handlers.security.roles.{RoleAdminHandlers, RoleHandlers}
 import com.sksamuel.elastic4s.handlers.security.users.{UserAdminHandlers, UserHandlers}
 import com.sksamuel.elastic4s.handlers.settings.SettingsHandlers
 import com.sksamuel.elastic4s.handlers.snapshot.SnapshotHandlers
+import com.sksamuel.elastic4s.handlers.synonyms.SynonymsHandlers
 import com.sksamuel.elastic4s.handlers.task.TaskHandlers
+import com.sksamuel.elastic4s.handlers.termsenum.TermsEnumHandlers
 import com.sksamuel.elastic4s.handlers.termvectors.TermVectorHandlers
 import com.sksamuel.elastic4s.handlers.update.UpdateHandlers
 import com.sksamuel.elastic4s.handlers.validate.ValidateHandlers
@@ -51,6 +54,7 @@ with LocksHandlers
 with MappingHandlers
 with NodesHandlers
 with ReindexHandlers
+with ReloadSearchAnalyzersHandlers
 with RoleAdminHandlers
 with RoleHandlers
 with RolloverHandlers
@@ -59,9 +63,11 @@ with SearchScrollHandlers
 with SettingsHandlers
 with SnapshotHandlers
 with StoredScriptHandlers
+with SynonymsHandlers
 with UpdateHandlers
 with TaskHandlers
 with TermVectorHandlers
+with TermsEnumHandlers
 with UserAdminHandlers
 with UserHandlers
 with ValidateHandlers

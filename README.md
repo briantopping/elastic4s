@@ -1,9 +1,9 @@
-elastic4s - Elasticsearch Scala Client
-=========
+# elastic4s - Elasticsearch Scala Client
 
-![master](https://github.com/sksamuel/elastic4s/workflows/master/badge.svg)
-[![elastic4s-core Scala version support](https://index.scala-lang.org/sksamuel/elastic4s/elastic4s-core/latest-by-scala-version.svg)](https://index.scala-lang.org/sksamuel/elastic4s/elastic4s-core)
-[<img src="https://img.shields.io/nexus/s/https/oss.sonatype.org/com.sksamuel.elastic4s/elastic4s-core_2.13.svg?label=latest%20snapshot&style=plastic"/>](https://oss.sonatype.org/content/repositories/snapshots/com/sksamuel/elastic4s/)
+[![build](https://github.com/Philippus/elastic4s/workflows/master/badge.svg)](https://github.com/Philippus/elastic4s/actions/workflows/master.yml?query=workflow%3Amaster+branch%3Amaster)
+![Current Version](https://img.shields.io/badge/version-8.13.0-brightgreen.svg?style=flat "8.13.0")
+[![Scala Steward badge](https://img.shields.io/badge/Scala_Steward-helping-blue.svg?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAVFBMVEUAAACHjojlOy5NWlrKzcYRKjGFjIbp293YycuLa3pYY2LSqql4f3pCUFTgSjNodYRmcXUsPD/NTTbjRS+2jomhgnzNc223cGvZS0HaSD0XLjbaSjElhIr+AAAAAXRSTlMAQObYZgAAAHlJREFUCNdNyosOwyAIhWHAQS1Vt7a77/3fcxxdmv0xwmckutAR1nkm4ggbyEcg/wWmlGLDAA3oL50xi6fk5ffZ3E2E3QfZDCcCN2YtbEWZt+Drc6u6rlqv7Uk0LdKqqr5rk2UCRXOk0vmQKGfc94nOJyQjouF9H/wCc9gECEYfONoAAAAASUVORK5CYII=)](https://scala-steward.org)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat "Apache 2.0")](LICENSE)
 
 **This is a community project - PRs will be accepted and releases published by the maintainer**
 
@@ -30,8 +30,13 @@ Elastic4s supports Scala collections so you don't have to do tedious conversions
 Current Elastic4s versions support Scala 2.12 and 2.13. Scala 2.10 support has been dropped starting with 5.0.x and Scala 2.11 has been dropped starting with 7.2.0. For releases that are compatible with earlier versions of Elasticsearch,
 [search maven central](http://search.maven.org/#search|ga|1|g%3A%22com.sksamuel.elastic4s%22).
 
+Note that starting from version 8.12.0 the group id has changed from com.sksamuel.elastic4s to nl.gn0s1s.
+
+
 | Elastic Version | Scala 2.12                                                                                                                                                                                                                                                                                                                   | Scala 2.13                                                                                                                                                                                                                                                                                                                   | Scala 3                                                                                                                                                                                                            |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.13.x          | [<img src="https://img.shields.io/maven-central/v/nl.gn0s1s/elastic4s-core_2.12/8.13.svg?label=latest%208.13%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                            | [<img src="https://img.shields.io/maven-central/v/nl.gn0s1s/elastic4s-core_2.13/8.13.svg?label=latest%208.13%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                            | [<img src="https://img.shields.io/maven-central/v/nl.gn0s1s/elastic4s-core_3/8.13.svg?label=latest%208.13%20release%20for%203"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_3)              |
+| 8.12.x          | [<img src="https://img.shields.io/maven-central/v/nl.gn0s1s/elastic4s-core_2.12/8.12.svg?label=latest%208.12%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                            | [<img src="https://img.shields.io/maven-central/v/nl.gn0s1s/elastic4s-core_2.13/8.12.svg?label=latest%208.12%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                            | [<img src="https://img.shields.io/maven-central/v/nl.gn0s1s/elastic4s-core_3/8.12.svg?label=latest%208.12%20release%20for%203"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_3)              |
 | 8.11.x          | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/8.11.svg?label=latest%208.11%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                               | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/8.11.svg?label=latest%208.11%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                               | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_3/8.11.svg?label=latest%208.11%20release%20for%203"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_3) |
 | 8.10.x          | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/8.10.svg?label=latest%208.10%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                               | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/8.10.svg?label=latest%208.10%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                               | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_3/8.10.svg?label=latest%208.10%20release%20for%203"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_3) |
 | 8.9.x           | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/8.9.svg?label=latest%208.9%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                 | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/8.9.svg?label=latest%208.9%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                 | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_3/8.9.svg?label=latest%208.9%20release%20for%203"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_3)   |
@@ -60,7 +65,7 @@ Current Elastic4s versions support Scala 2.12 and 2.13. Scala 2.10 support has b
 | 7.4.x           | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/7.4.svg?label=latest%207.4%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                 | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/7.4.svg?label=latest%207.4%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                 |
 | 7.3.x           | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/7.3.svg?label=latest%207.3%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                 | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/7.3.svg?label=latest%207.3%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                 |
 | 7.2.x           | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/7.2.svg?label=latest%207.2%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                 | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/7.2.svg?label=latest%207.2%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                 |
-| 7.1.x           | [<img src="https://img.shields.io/maven-metadata/v.svg?label=latest%207.1%20release%20for%202.12&metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fcom%2Fsksamuel%2Felastic4s%2Felastic4s-core_2.12%2Fmaven-metadata.xml&versionPrefix=7.1."/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                 | [<img src="https://img.shields.io/maven-metadata/v.svg?label=latest%207.1%20release%20for%202.13&metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fcom%2Fsksamuel%2Felastic4s%2Felastic4s-core_2.13%2Fmaven-metadata.xml&versionPrefix=7.1."/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                 |
+| 7.1.x           | [<img src="https://img.shields.io/maven-metadata/v.svg?label=latest%207.1%20release%20for%202.12&metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fcom%2Fsksamuel%2Felastic4s%2Felastic4s-core_2.12%2Fmaven-metadata.xml&versionPrefix=7.1."/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22) | [<img src="https://img.shields.io/maven-metadata/v.svg?label=latest%207.1%20release%20for%202.13&metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fcom%2Fsksamuel%2Felastic4s%2Felastic4s-core_2.13%2Fmaven-metadata.xml&versionPrefix=7.1."/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22) |
 | 7.0.x           | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.12/7.0.svg?label=latest%207.0%20release%20for%202.12"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.12%22)                                                                                                 | [<img src="https://img.shields.io/maven-central/v/com.sksamuel.elastic4s/elastic4s-core_2.13/7.0.svg?label=latest%207.0%20release%20for%202.13"/>](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22elastic4s-core_2.13%22)                                                                                                 |
 
 For releases prior to 7.0 [search maven central](https://search.maven.org/search?q=elastic4s).
@@ -68,7 +73,7 @@ For releases prior to 7.0 [search maven central](https://search.maven.org/search
 ## Quick Start
 
 We have created sample projects in both sbt, maven and gradle. Check them out here:
-https://github.com/sksamuel/elastic4s/tree/master/samples
+https://github.com/philippus/elastic4s/tree/master/samples
 
 To get started you will need to add a dependency:
 
@@ -79,9 +84,9 @@ To get started you will need to add a dependency:
 val elastic4sVersion = "x.x.x"
 libraryDependencies ++= Seq(
   // recommended client for beginners
-  "com.sksamuel.elastic4s" %% "elastic4s-client-esjava" % elastic4sVersion,
+  "nl.gn0s1s" %% "elastic4s-client-esjava" % elastic4sVersion,
   // test kit
-  "com.sksamuel.elastic4s" %% "elastic4s-testkit" % elastic4sVersion % "test"
+  "nl.gn0s1s" %% "elastic4s-testkit" % elastic4sVersion % "test"
 )
 ```
 
@@ -138,7 +143,7 @@ An example is worth 1000 characters so here is a quick example of how to connect
 index and index a one field document. Then we will search for that document using a simple text query.
 
 **Note:** As of version `0.7.x` the `LocalNode` functionality has been removed. It is recommended that you stand up
-a local ElasticSearch Docker container for development. This is the same strategy used in the [tests](https://github.com/sksamuel/elastic4s/blob/master/elastic4s-testkit/src/main/scala/com/sksamuel/elastic4s/testkit/DockerTests.scala).
+a local ElasticSearch Docker container for development. This is the same strategy used in the [tests](https://github.com/philippus/elastic4s/blob/master/elastic4s-testkit/src/main/scala/com/sksamuel/elastic4s/testkit/DockerTests.scala).
 
 ```scala
 import com.sksamuel.elastic4s.fields.TextField
@@ -266,7 +271,6 @@ client.execute {
 Then Elasticsearch is preconfigured with those mappings for those fields.
 It is still fully dynamic and other fields will be created as needed with default options. Only the fields specified will have their type preset.
 
-More examples on the create index syntax can be [found here](https://sksamuel.github.io/elastic4s/docs/indices/createindex.html).
 
 
 
@@ -631,26 +635,26 @@ For full details read the [streams documentation](docs/streams.md)
 For gradle users, add (replace 2.12 with 2.13 for Scala 2.13):
 
 ```groovy
-compile 'com.sksamuel.elastic4s:elastic4s-core_2.12:x.x.x'
+compile 'nl.gn0s1s:elastic4s-core_2.12:x.x.x'
 ```
 
-For SBT users simply add:
+For SBT users add:
 
 ```scala
-libraryDependencies += "com.sksamuel.elastic4s" %% "elastic4s-core" % "x.x.x"
+libraryDependencies += "nl.gn0s1s" %% "elastic4s-core" % "x.x.x"
 ```
 
-For Maven users simply add (replace 2.12 with 2.13 for Scala 2.13):
+For Maven users add (replace 2.12 with 2.13 for Scala 2.13):
 
 ```xml
 <dependency>
-    <groupId>com.sksamuel.elastic4s</groupId>
+    <groupId>nl.gn0s1s/groupId>
     <artifactId>elastic4s-core_2.12</artifactId>
     <version>x.x.x</version>
 </dependency>
 ```
 
-Check for the latest released versions on [maven central](http://search.maven.org/#search|ga|1|g%3A%22com.sksamuel.elastic4s%22)
+Check for the latest released versions on [maven central](https://search.maven.org/search?q=g:nl.gn0s1s%20AND%20a:elastic4s*)
 
 ## Building and Testing
 
@@ -665,9 +669,8 @@ And to test:
 ```scala
 sbt test
 ```
-The project is currently [cross-built](https://www.scala-sbt.org/1.x/docs/Cross-Build.html) against Scala 2.12 and
-2.13, when preparing a pull request the above commands should be run with the `sbt` `+` modifier to compile and test
-against both versions. For example: `sbt +compile`.
+The project is currently [cross-built](https://www.scala-sbt.org/1.x/docs/Cross-Build.html) against Scala 2.12, 2.13 and 3, when preparing a pull request the above commands should be run with the `sbt` `+` modifier to compile and test
+against all versions. For example: `sbt +compile`.
 
 For the tests to work you will need to run a local elastic instance on port 39227, _with security enabled_. One easy way of doing this is to use docker (via docker-compose):
 `docker-compose up`
@@ -695,6 +698,7 @@ For the tests to work you will need to run a local elastic instance on port 3922
 * bluerootlabs.io
 * mapp.com
 * Jusbrasil
+* wehkamp
 
 _Raise a PR to add your company here_
 
